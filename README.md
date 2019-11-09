@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+_David_: `.forEach` modifies/interacts/accesses the array in place and `map`, respecting the immutability feature of the functional programming paradigm, creates a copy of the array and modifies/interacts/accesses each array element of the copy.
+
 2. What is the difference between a function and a method?
+
+_David_: A function is the general term for a unit of code that the programmer writes to accomplish or do something, such as add two numbers. A method is a function defined within an object, usually a class object.
 
 3. What is closure?
 
+_David_: A closure is defined as a function (or object) and the environment (lexical scope) in which the function is defined. Closures are a feature of some programming languages, including Python and JavaScript. A closure is created when a function is created, and allows objects defined within the inner scope of that function to have access to, or know about, objects within the outer scope. The outer scope is not necessarily one single level of scope but could potentially represent many nested scopes. Only the most innermost scope would have access to everything from itself -----> the global scope. This relationship does NOT function in reverse, however. The outer scope cannot access, or have knowledge of, objects defined within any inner scope. 
+
 4. Describe the four rules of the 'this' keyword.
 
+_David_: The four rules of this are: 1)`Global binding`, 2)`Implicit binding`, 3)`New binding`, 4)`Explicit binding`. In brief, they function as follows:
+          1)`Global binding`: Using the `this` keyword inside an object or variable without declaring a class or constructor to create context to define `this` would refer to the console or windows object.
+          2)`Implicit binding`: Using the `this` keyword in an object literal would bind `this` to the object defined by that literal.
+          3)`New binding`: Using the `this` keyword in a class or constructor function would bind `this` to the object defined by the class or constructor after an instance of the object is created using the `new` keyword.
+          4)`Explicit binding`: Using the `this` keyword in object methods such as `.bind`, `.apply` or `.call` would create context within that function and `this` would refer to the object on which to apply/call/bind that method. It is used to bind one object or it's method(s) to another object.
+
 5. Why do we need super() in an extended class?
+
+_David_: The super() call under the hood completes the same purpose as calling `Parent.call(this, arguments)` in the constructor function pattern. It allows the child class to inherit the properties and methods of the parent class without having to use `Parent.call` to inherit the properties of the Parent class, and using `Child.prototype = Object.create(Parent.prototype)` to inherit the methods from the Parent class.
 
 ## Project Set up
 
